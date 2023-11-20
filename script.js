@@ -7,5 +7,7 @@ convertBtn.addEventListener('click', () => {
 });
 
 function sendURL(URL) {
-	window.location.href = `http://localhost:4000/download?URL=${URL}`;
+	// window.location.href = `http://localhost:4000/download?URL=${URL}`;
+	window.location.href = `https://node-api-wvc0.onrender.com/download?URL=${URL}`;
 }
+
