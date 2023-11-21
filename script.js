@@ -1,5 +1,5 @@
-let convertBtn = document.querySelector('.convert-button');
-let URLinput = document.querySelector('.URL-input');
+let convertBtn = document.getElementById('downloadButton');
+let URLinput = document.getElementById('urlBox');
 
 convertBtn.addEventListener('click', () => {
 	console.log(`URL: ${URLinput.value}`);	
@@ -7,7 +7,6 @@ convertBtn.addEventListener('click', () => {
 });
 
 function sendURL(URL) {
-	// window.location.href = `http://localhost:4000/download?URL=${URL}`;
 	window.location.href = `https://node-api-wvc0.onrender.com/download?URL=${URL}`;
 }
 
