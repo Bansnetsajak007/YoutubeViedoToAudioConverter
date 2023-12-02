@@ -16,6 +16,7 @@ app.get('/download', async (req,res) => {
 	try{
 		const info = await ytdl.getBasicInfo(URL);
 		const title = info.videoDetails.title;
+    res.header('Content-Type', 'audio/mpeg');
 		res.header('Content-Disposition', `attachment; filename="${title}.mp3"`);
 		ytdl(URL, { filter: 'audioonly', quality: 'highestaudio' })
 		.pipe(res);
